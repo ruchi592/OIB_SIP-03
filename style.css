@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(165deg, mediumorchid, mediumblue);
+    padding: 10px;
+}
+.todolist {
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 30px 70px;
+    margin: 100px auto 25px;
+    background: lavender;
+    border-radius: 15px;
+}
+.todolist h2 {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    margin-bottom: 20px;
+    color: slateblue;
+}
+.todolist h2 img {
+    height: 22px;
+    width: 17px;
+    margin-right: 10px;
+}
+input{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: 25px;
+    font-size: 15px;
+    flex: 1;
+    padding: 10px;
+}
+.bar {
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    background: white;
+    border-radius: 40px;
+    justify-content: space-between ;
+    align-items: center;
+}
+button {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 0px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: linear-gradient(135deg, slateblue, royalblue);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+ul li {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px 10px 15px 50px;
+    user-select: none;
+    list-style: none;
+    color: rgb(65, 65, 225);
+}
+ul li::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-image: url(unchecked2.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    top: 15px;
+    left: 10px;
+}
+ul li.checked {
+    color: rgba(0, 0, 205, 0.412);
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(checked_3.png);
+}
+ul li span {
+    position: absolute;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    right: 0;
+    top: 5px;
+    line-height: 35px;
+}
+ul li span:hover {
+    background: rgb(177, 177, 252);
+    border-radius: 50%;
+}
